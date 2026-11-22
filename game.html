@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Star Catcher — built from one prompt</title>
+<style>
+  body { margin: 0; background: #0a0820; color: #fff; font-family: sans-serif;
+         display: flex; flex-direction: column; align-items: center; }
+  h1 { margin: 18px 0 4px; font-size: 28px; }
+  p { margin: 4px 0 14px; color: #cbb8ff; }
+  canvas { width: min(960px, 96vw); height: auto; border-radius: 12px;
+           box-shadow: 0 0 40px rgba(255, 79, 154, .35); }
+  .foot { margin-top: 12px; color: #8f86b8; font-size: 13px; }
+  a { color: #ff8fc0; }
+</style>
+</head>
+<body>
+  <h1>⭐ Star Catcher</h1>
+  <p>Move with ← → or your mouse. Catch the stars, dodge nothing — just don't drop them. 30 seconds, 5 lives.</p>
+  <canvas id="game"></canvas>
+  <p class="foot">Built by an AI agent from one prompt, for a $20 bounty on
+    <a href="https://make.fun/bounty/post-x-the-agent-builds-a-game-from-20261122-1709">make.fun</a>.
+    Golden star = 25, star = 10.</p>
+  <script src="game.js"></script>
+  <script>StarCatcher.play(document.getElementById('game'));</script>
+</body>
+</html>
